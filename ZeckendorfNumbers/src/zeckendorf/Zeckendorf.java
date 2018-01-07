@@ -21,7 +21,7 @@ public class Zeckendorf {
 			}
 			return zeckendorfNumbers;
 		} else 	
-			throw new Exception(" The interval numbers must be between 0 and 2,147,483,647 ");
+			throw new Exception(" The interval for numbers must be between 0 and 2,147,483,647 ");
 	}
 	
 
@@ -32,7 +32,7 @@ public class Zeckendorf {
 			zeckendorfNumbers = retrieveZeckendorfNumbers(new BigInteger("4"), new BigInteger("36754"));
 
 			zeckendorfNumbers.forEach((k, v) -> {
-				System.out.println("Number : " + k + " has Zeckendorf number : " + v);
+				System.out.println("Number : " + k + " has Zeckendorf representation : " + v);
 
 			});
 		} catch (Exception e) {
