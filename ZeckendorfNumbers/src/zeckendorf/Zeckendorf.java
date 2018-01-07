@@ -27,7 +27,7 @@ public class Zeckendorf {
 
 		Map<Integer, BigInteger> zeckendorfNumbers;
 		try {
-			zeckendorfNumbers = retrieveZeckendorfNumbers(new BigInteger("4"), new BigInteger("154"));
+			zeckendorfNumbers = retrieveZeckendorfNumbers(new BigInteger("4"), new BigInteger("36754"));
 
 			zeckendorfNumbers.forEach((k, v) -> {
 				System.out.println("Number : " + k + " has Zeckendorf number : " + v);
