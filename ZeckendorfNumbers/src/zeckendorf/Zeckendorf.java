@@ -7,7 +7,6 @@ import java.util.Map;
 
 public class Zeckendorf {
 	
-	
 	public static Map<Integer, BigInteger> retrieveZeckendorfNumbers(BigInteger from, BigInteger to) throws Exception{
 		if ((from.intValue() >= 0) && (to.intValue() <=  2147483647) && (from.intValue() < to.intValue())){
 				
@@ -19,10 +18,11 @@ public class Zeckendorf {
 				zeckendorfNumbers.put(i, ZeckendorfUtils.calculateZeckendorfNumber(i, fibSeqNumbers));
 			}
 			return zeckendorfNumbers;
-		}else throw new Exception(" The interval numbers must be between 0 and 2,147,483,647 ");
-		
+		}
+		else throw new Exception(" The interval numbers must be between 0 and 2,147,483,647 ");	
 	}
 
+	
 	public static void main(String... args) {
 
 		Map<Integer, BigInteger> zeckendorfNumbers;
@@ -35,9 +35,6 @@ public class Zeckendorf {
 			});
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-
-		
+		}		
 	}
-
 }

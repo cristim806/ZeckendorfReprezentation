@@ -29,6 +29,7 @@ public class ZeckendorfUtils {
         return fibonacciSeqList;
     }
 	
+	
 	public static BigInteger calculateZeckendorfNumber(int number,
 			List<Integer> fibonacciNumbers) {
 	
