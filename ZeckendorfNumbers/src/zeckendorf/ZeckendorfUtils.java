@@ -28,19 +28,15 @@ public class ZeckendorfUtils {
 		return fibonacciSeqList;
 	}
 
-	
-	public static BigInteger calculateZeckendorfNumber(int number,
-			List<Integer> fibonacciNumbers) {
+	public static BigInteger calculateZeckendorfNumber(int number, List<Integer> fibonacciNumbers) {
 
 		int numbersLength = fibonacciNumbers.size() - 1;
 		for (Integer value : fibonacciNumbers) {
 			if (number >= value) {
-				BigInteger bigNr = (numbersLength == 0) ? BigInteger.ONE
-						: BigInteger_10.pow(numbersLength);
+				BigInteger bigNr = (numbersLength == 0) ? BigInteger.ONE : BigInteger_10.pow(numbersLength);
 
 				numbersLength--;
-				return bigNr.add(calculateZeckendorfNumber(number - value,
-						fibonacciNumbers));
+				return bigNr.add(calculateZeckendorfNumber(number - value, fibonacciNumbers));
 			} else {
 				numbersLength--;
 			}
